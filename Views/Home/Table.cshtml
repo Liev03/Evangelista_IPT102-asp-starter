@@ -1,0 +1,56 @@
+@model StudentInfoModelz[]
+
+@{
+    ViewData["Title"] = "Student Information Table";
+}
+<h1 align="center">@ViewData["Title"]</h1>
+<br />
+<div style="text-align: center;">
+    <h4>Click the button to show the table</h4>
+    <br>
+    <button id="showTableButton">Show Table</button>
+</div>
+<br />
+<div id="tablediv" class="hidden">
+    <table align="center" class="student-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Student Id</th>
+                <th>Age</th>
+                <th>Email Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.StudentId</td>
+                    <td>@student.StudentAge</td>
+                    <td>@student.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+<br />
+    <audio loop id="tuca" src="~/TUCA DONKA.mp3"></audio>
+    <img src="~/amogus.gif" class="amogs">
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var showTableButton = document.getElementById("showTableButton");
+        var tableContainer = document.getElementById("tablediv");
+        var song = document.getElementById("tuca");
+
+        showTableButton.addEventListener("click", function () {
+
+            if (tableContainer.style.display = "none") {
+                tableContainer.style.display = "block";
+                song.play();
+                song.volume = 0.2;
+            }
+        });
+    });
+</script>

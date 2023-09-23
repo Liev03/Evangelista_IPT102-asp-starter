@@ -3,14 +3,18 @@
 public class HomeController : Controller
 {
     public IActionResult Index()
-    {
-        var studentInfoArray = new[]
         {
-            new StudentInfoModel { Name = "John Doe", StudentId = "S001", StudentAge = "20" },
-            new StudentInfoModel { Name = "Jane Smith", StudentId = "S002", StudentAge = "22" },
-            new StudentInfoModel { Name = "Mike Johnson", StudentId = "S003", StudentAge = "31" }
-        };
-
+            return View();
+        }
+    public IActionResult Table()
+        {
+            var studentInfoArray = new[]
+                {
+                    new StudentInfoModelz {Name ="Ian", StudentId ="0001", StudentAge ="21", Email ="ghostadie69@gmail.com"},
+                    new StudentInfoModelz {Name ="Jerome", StudentId ="0002", StudentAge ="18", Email ="chrisnel123@gmail.com"},
+                    new StudentInfoModelz {Name ="Liam", StudentId ="0003", StudentAge ="20", Email ="uriels.evangelista@gmail.com"},
+                    new StudentInfoModelz {Name ="Mariah", StudentId ="0004", StudentAge ="19", Email ="chiseidelulu19@gmail.com"}
+                };
         return View(studentInfoArray);
-    }
+        }
 }

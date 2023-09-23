@@ -8,10 +8,6 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +15,41 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 500px;
+}
+
+thead {
+    background-color: red;
+    text-align: center;
+}
+tbody {
+    background-color: yellow;
+}
+
+td {
+    width: 100px;
+}
+ .hidden {
+     display: none;
+ }
+.amogs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+  position: absolute;
+  bottom:0;
+  padding-top: 10px;
+  height: 5%;
+  width: 100%;
 }
